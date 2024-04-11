@@ -1,32 +1,24 @@
-import React, { useState, useContext } from "react";
-import EmployeeForm from "../components/employeeform";
-import Modal from "../components/modal";
-import { Link } from "react-router-dom";
-import { EmployeeContext } from "../contexts/employeeContext";
+// import React, { useContext } from "react";
+// import EmployeeForm from "../components/employeeform";
 
-function Container() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const { addEmployee } = useContext(EmployeeContext);
+// import { Link } from "react-router-dom";
+// import { EmployeeContext } from "../contexts/employeeContext";
 
-  // Fonction de sauvegarde des données de l'employé
-  const saveEmployeeData = (employeeData) => {
-    addEmployee(employeeData); // Ajouter les données de l'employé en utilisant le contexte
-    setIsModalOpen(true);
-  };
+// function Container() {
+//   const { addEmployee } = useContext(EmployeeContext);
 
-  const closeModal = () => {
-    // Fermer le modal de confirmation
-    setIsModalOpen(false);
-  };
+//   // Fonction de sauvegarde des données de l'employé
+//   const saveEmployeeData = (employeeData) => {
+//     addEmployee(employeeData); // Ajouter les données de l'employé en utilisant le contexte
+//   };
 
-  return (
-    <div className="container">
-      <Link to={"/employee-list"}>View Current Employees</Link>
-      <h2>Create Employee</h2>
-      <EmployeeForm onSubmit={saveEmployeeData} />
-      {isModalOpen && <Modal onClose={closeModal} />}
-    </div>
-  );
-}
+//   return (
+//     <div className="container">
+//       <Link to={"/employee-list"}>View Current Employees</Link>
+//       <h2>Create Employee</h2>
+//       <EmployeeForm onSubmit={saveEmployeeData} />
+//     </div>
+//   );
+// }
 
-export default Container;
+// export default Container;

@@ -2,19 +2,20 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function MyDatePicker() {
-  const [selectedDate, setSelectedDate] = useState(null);
+function MyDatePicker({ selected, onDateChange }) {
+  const [selectedDate, setSelectedDate] = useState(selected);
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
+    onDateChange(date);
   };
 
   return (
     <DatePicker
       selected={selectedDate}
       onChange={handleDateChange}
-      dateFormat="dd/MM/yyyy" // Personnalisez le format de la date si nécessaire
-      placeholderText="dd/MM/yyyy" // Texte de l'invite
+      dateFormat="yyyy/MM/dd"
+      placeholderText="dd/MM/yyyy"
     />
   );
 }
