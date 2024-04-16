@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { EmployeeProvider } from "./contexts/employeeContext";
-import Home from "./pages/home";
+import Home from "./pages/create-employee";
 import EmployeeList from "./pages/employee-list";
 import "./App.css";
 

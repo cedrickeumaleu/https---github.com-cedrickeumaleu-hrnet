@@ -4,33 +4,13 @@ import { EmployeeContext } from "../contexts/employeeContext";
 import MyDatePicker from "../components/date";
 import DropdownMenu from "../components/dropdownMenu";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import Modal from "madal";
 
 function EmployeeForm() {
   const { addEmployee, formData, setFormData } = useContext(EmployeeContext);
 
-  // const [formData, setFormData] = useState({}); // Données de l'employé à sauvegarder
-
-  // const initialFormData = {
-  //   firstName: "",
-  //   lastName: "",
-  //   dateOfBirth: null,
-  //   startDate: null,
-  //   department: "",
-  //   address: {
-  //     street: "",
-  //     city: "",
-  //     state: "",
-  //     zipCode: "",
-  //   },
-  // };
-
   // const [formData, setFormData] = useState({ ...initialFormData });
   // const [showModal, setShowModal] = useState(false);
-
-  // Réinitialiser le formulaire après soumission
-  // const resetForm = () => {
-  //   setFormData(initialFormData);
-  // };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -83,34 +63,11 @@ function EmployeeForm() {
         return;
       }
     }
-    addEmployee(formData); // Add employee data to context
-    // setFormData({ ...initialFormData }); // Réinitialiser les données du formulaire
+    addEmployee(formData);
+    // setShowModal(true);
   };
 
-  // Fonction de sauvegarde des données de l'employé
-  // const handleSaveEmployee = (e) => {
-  //   e.preventDefault();
-  //   // Vérifiez si le formulaire est rempli correctement avant de sauvegarder
-  //   if (
-  //     formData.firstName &&
-  //     formData.lastName &&
-  //     formData.department &&
-  //     formData.dateOfBirth &&
-  //     formData.startDate &&
-  //     formData.address.city &&
-  //     formData.address.state &&
-  //     formData.address.street &&
-  //     formData.address.zipCode
-  //   ) {
-  //     addEmployee(formData); // Ajoutez les données de l'employé au tableau d'employés
-  //     setFormData({}); // Réinitialisez les données du formulaire après la sauvegarde
-  //     // setShowModal(true); // Afficher la modal après avoir sauvegardé les données
-  //   } else {
-  //     alert("Please fill out all required fields."); // Affichez un message d'erreur si des champs requis sont manquants
-  //   }
-  // };
-
-  // const closeModal = () => {
+  // const handleCloseModal = () => {
   //   setShowModal(false);
   // };
 
@@ -164,7 +121,7 @@ function EmployeeForm() {
 
       {/* <Modal
         isOpen={showModal}
-        onClose={closeModal}
+        onClose={handleCloseModal}
         message="Employee saved successfully!"
       /> */}
     </>

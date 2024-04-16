@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { EmployeeContext } from "../contexts/employeeContext";
 import { Table, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -134,8 +134,6 @@ function ListEployees() {
           >
             Previous
           </button>{" "}
-          {/* Compteur de page actuelle */}
-          {/* <div className='button-current'>{currentPage}</div> */}{" "}
           {/* Boutons de pagination */}
           {renderPageButtons()}
           {/* Bouton "Suivant" */}
