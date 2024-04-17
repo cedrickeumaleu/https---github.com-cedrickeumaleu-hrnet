@@ -1,13 +1,13 @@
-// import Modale from "components-modal-modal";
 // import React from "react";
+// import Modal from "madal";
 
-// function Modal({ isOpen, onClose, message }) {
+// function MyModal({ isOpen, onClose, message }) {
 //   return (
-//     <Modale show={isOpen} onHide={onClose}>
+//     <Modal show={isOpen} onHide={onClose}>
 //       <div closeButton></div>
 //       <div>{message}</div>
-//     </Modale>
+//     </Modal>
 //   );
 // }
 
-// export default Modal;
+// export default MyModal;

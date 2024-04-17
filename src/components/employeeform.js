@@ -1,16 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import AddressFieldset from "../components/addressfieldset";
 import { EmployeeContext } from "../contexts/employeeContext";
 import MyDatePicker from "../components/date";
 import DropdownMenu from "../components/dropdownMenu";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Modal from "madal";
+import Modal from "components-modal-modal";
 
 function EmployeeForm() {
   const { addEmployee, formData, setFormData } = useContext(EmployeeContext);
 
   // const [formData, setFormData] = useState({ ...initialFormData });
-  // const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -64,12 +64,12 @@ function EmployeeForm() {
       }
     }
     addEmployee(formData);
-    // setShowModal(true);
+    setShowModal(true);
   };
 
-  // const handleCloseModal = () => {
-  //   setShowModal(false);
-  // };
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   return (
     <>
@@ -119,11 +119,11 @@ function EmployeeForm() {
         </div>
       </form>
 
-      {/* <Modal
+      <Modal
         isOpen={showModal}
         onClose={handleCloseModal}
         message="Employee saved successfully!"
-      /> */}
+      />
     </>
   );
 }

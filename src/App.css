@@ -59,6 +59,45 @@ label {
   margin: 20px 0;
  }
 
+ /*css modal*/
+ .modal{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.modal-content { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 50%;
+  left: 40%;
+  width: 266px;
+  height: 100px;
+  position: absolute;
+}
+
+.modal-content p{
+  padding: 16px;
+  margin-top: 19px;
+}
+
+.close {
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 21px;
+  background: gray;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
  .footertable{
   display: flex;
   justify-content: space-between;
